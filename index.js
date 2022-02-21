@@ -24,10 +24,14 @@ var server = http.createServer(function(req, res){
     //get the query string as an object
     let queryStringObject = parsedUrl.query;
 
+
+    //get the header as an object
+    let headers = req.headers;
+
     //send the response
     res.end("Hello World!");
     //log the response
-    console.log("Request is received on this path. " + trimmedPath + " method " + method + " query string ", queryStringObject);
+    console.log("received with headers", headers);
 
 });
 
